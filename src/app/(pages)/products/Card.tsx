@@ -1,4 +1,4 @@
-import { Product } from "@/app/types";
+import {Product} from "@/app/types";
 import Image from "next/image";
 import Link from "next/link";
 import DeleteButton from "./DeleteButton";
@@ -7,11 +7,14 @@ type Props = {
 	product: Product;
 };
 
-const Card = ({ product }: Props) => {
+const Card = ({product}: Props) => {
 	return (
 		<div className="bg-white rounded-lg p-2 sm:p-3 shadow-lg flex flex-col">
-			<div className="relative h-[200px]">
-				<Image fill src={product.image_url} alt={product.name} className="rounded-lg" />
+			<div className="relative h-[200px] w-full">
+				<Image src={product.image_url}
+				       fill
+				       alt={product.name}
+				       className="rounded-lg max-w-xl max-h-56 object-cover aspect-ratio"/>
 			</div>
 			
 			<div className="mt-2 flex flex-col justify-between flex-1">
@@ -28,7 +31,7 @@ const Card = ({ product }: Props) => {
 						Düzenle
 					</Link>
 					
-					<DeleteButton id={product.id} />
+					<DeleteButton id={product.id}/>
 				</div>
 			</div>
 		</div>

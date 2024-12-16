@@ -4,7 +4,9 @@ import Link from "next/link";
 import {Suspense} from "react";
 import Card from "./Card";
 
+
 const Page = () => {
+	
 	return (
 		<div className="p-4">
 			<div className="flex justify-between items-center">
