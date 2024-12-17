@@ -6,7 +6,7 @@ type Props = {
 
 const TableContainer = ({children}: Props) => {
 	return (
-		<div className="max-sm:w-[80vw] overflow-x-auto">
+		<div className="max-sm:w-[80vw] whitespace-nowrap rounded overflow-x-auto">
 			<table border={4} className="border shadow w-full bg-white rounded-md mt-5 z-0">
 				{children}
 			</table>

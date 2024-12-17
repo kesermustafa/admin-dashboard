@@ -13,7 +13,7 @@ const UsersTable = async () => {
 			<tr className="border-b shadow">
 				<th className="py-4">#</th>
 				<th>İsim</th>
-				<th>Eposta</th>
+				<th>E-posta</th>
 				<th>Ülke</th>
 				<th>Şehir</th>
 				<th>Eylem</th>
@@ -23,7 +23,7 @@ const UsersTable = async () => {
 			<tbody>
 			{users.map ((user, key) => (
 				<tr key={key} className="border-b">
-					<td className="py-8">{key}</td>
+					<td className="py-8">{key + 1}</td>
 					<td>{user.name}</td>
 					<td>{user.email}</td>
 					<td>{user.address.country}</td>

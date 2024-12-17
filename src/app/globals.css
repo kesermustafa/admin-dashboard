@@ -3,56 +3,92 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #ffffff;
+    --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    color: var(--foreground);
+    background: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 @layer components {
-  .container {
-    @apply py-5 md:py-10 px-5 md:px-10 lg:px-20 max-w-[1440px] mx-auto;
-  }
+    .container {
+        @apply py-5 md:py-10 px-5 md:px-10 lg:px-20 max-w-[1440px] mx-auto;
+    }
 
-  .title {
-    @apply text-3xl md:text-4xl font-semibold;
-  }
+    .title {
+        @apply text-3xl md:text-4xl font-semibold;
+    }
 }
 
 
 .navbar {
-  input {
-    display: none;
-  }
+    input {
+        display: none;
+    }
 
-  .nav-text {
-    display: none;
-  }
+    .nav-text {
+        display: none;
+    }
 
-  &:has(input:checked) .nav-text {
-    display: block;
-  }
+    &:has(input:checked) .nav-text {
+        display: block;
+    }
 }
 
 canvas {
-  width: 100% !important;
+    width: 100% !important;
+}
+
+table thead tr {
+    background-color: #a9adad !important;
+}
+
+table tr:nth-child(odd) {
+    background-color: #f4efef;
+}
+
+table tr:nth-child(even) {
+    background-color: #e3e0e0;
+}
+
+table tr:hover {
+    background-color: #e3edfb;
 }
 
 table th {
-  padding: 0 20px;
+    padding: 10px 15px;
 }
 
 table td {
-  padding: 0 20px;
+    padding: 10px 15px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: lightgray;
+}
+
+::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: dimgray;
 }

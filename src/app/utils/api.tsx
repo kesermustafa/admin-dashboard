@@ -104,7 +104,7 @@ export const getValues = async (): Promise<Values> => {
 	const productData = await getProducts ();
 	
 	return {
-		totalUsers: userData.length * 186,
+		totalUsers: userData.length * 225,
 		totalOrders:
 			orderData.reduce (
 				(a, b) => a + b.items.reduce ((c, d) => c + d.quantity, 0),

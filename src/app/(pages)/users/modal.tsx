@@ -44,7 +44,7 @@ const Modal = async ({id}: Props) => {
 	
 	return (
 		<div className="fixed bg-black/10 inset-0 backdrop-blur-[2px] z-[999999] grid place-items-center">
-			<div className="bg-white rounded-lg shadow py-8 px-14 pb-16">
+			<div className="bg-white rounded-lg shadow py-8 px-14 pb-12">
 				<div className="flex justify-end">
 					<Link
 						href="/users"
@@ -60,7 +60,7 @@ const Modal = async ({id}: Props) => {
 					</h1>
 					
 					{fields.map ((field, key) => (
-						<div className="flex justify-between gap-16" key={key}>
+						<div className="flex justify-between border-b pb-1 gap-16" key={key}>
 							<span>{field.label}</span>
 							<span className="font-semibold">{field.value}</span>
 						</div>
